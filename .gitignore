@@ -1,6 +1,7 @@
-# Potential copyright sadness
-.mp3
-.mp4
+# Potential copyright sadness, tmp files
+*.mp3
+*.mp4
+*.status
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
