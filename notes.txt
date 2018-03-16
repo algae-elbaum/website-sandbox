@@ -1,0 +1,8 @@
+As I look through my current setup it occurs to me that I have no idea how the
+hell it works.
+
+I set it up a couple years ago and now I'm not even sure where the homepage html
+lives.
+
+For now I'm going to try to consolidate everything I have so it can all live in
+this repo, and after that is when I'll do new work
