@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="restaurants.js"></script>
+
+</head>
+
+<body style="margin: 20px;">
+<div class="container">
+    <div class="col-sm-8">
+        <div id="genres">
+            <h3>Genres</h3>
+            <div class="col-sm-4">
+                <div class="checkbox"><label><input type="checkbox" id="burgers" checked>Burgers</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="pizza" checked>Pizza</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="diner" checked>Diner</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="buffet" checked>Buffet</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="gluten free option" checked>Gluten free option</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="burrito" checked>Burrito</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="sandwich" checked>Sandwich</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="fish" checked>Fish</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="hotdog" checked>Hotdog</label></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="checkbox"><label><input type="checkbox" id="asian" checked>Asian</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="mongolian" checked>Mongolian</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="thai" checked>Thai</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="fake chinese" checked>Fake chinese</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="sushi" checked>Sushi</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="poke" checked>Poke</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="ramen" checked>Ramen</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="chinese" checked>Chinese</label></div>
+                <div class="checkbox"><label><input type="checkbox" id="indian" checked>Indian</label></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div>
+            <h3>Maximum Distance</h3>
+            <div class="form-group">
+                <label for="dist">Distance (in miles):</label>
+                <input type="number" class="form-control" id="dist" value="1.5">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <input type="button" class="btn btn-info" onclick="pick_food()" value="Roll for food">
+</div>
+<hr/>
+<div class="container">
+    <h2 style="display: inline-block;">Go to:</h2>
+    <h3 style="display: inline-block; margin-left: 10px;" id="result"></h3>
+</div>
+</body>
+
+</html>

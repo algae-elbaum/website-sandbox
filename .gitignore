@@ -1,3 +1,7 @@
+# Potential copyright sadness
+.mp3
+.mp4
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
