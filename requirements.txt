@@ -1,0 +1,4 @@
+Django==2.0.3
+mod-wsgi==4.6.2
+mod-wsgi-httpd==2.4.27.1
+pytz==2018.3
