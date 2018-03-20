@@ -1,0 +1,9 @@
+{% if music_files %}
+    <ul>
+    {% for file in music_files %}
+        <li><a href={{ file.path }}>{{ file.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No music files.</p>
+{% endif %}

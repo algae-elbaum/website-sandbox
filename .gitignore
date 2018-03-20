@@ -3,6 +3,10 @@
 *.mp4
 *.status
 *.bak
+*.sqlite3
+*.swp
+*.swp
+migrations/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
