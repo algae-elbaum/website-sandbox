@@ -9,14 +9,14 @@ def index(request):
     return HttpResponse('3, 2, 1 let\'s jam.')
 
 
-class AlbumList(ListView):
+class AlbumsView(ListView):
     template_name = 'muse/files.html'
 
     def get_queryset(self):
         return Album.objects.filter(name__startswith=self.kwargs.get('path', ''))
 
 
-class SongList(ListView):
+class SongsView(ListView):
     template_name = 'muse/files.html'
 
     def get_queryset(self):

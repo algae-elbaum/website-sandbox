@@ -5,6 +5,7 @@ from django.conf import settings
 from muse.models import Album, Song
 from os import walk, path
 from muse.utl import is_music
+
 class Command(BaseCommand):
     args = '<foo bar ...>'
     help = 'our help string comes here'
@@ -19,7 +20,7 @@ class Command(BaseCommand):
                 print(d)
                 if not Album.objects.filter(name=d):
                     new = Album(name=d)
-                    new.save()  
+                    new.save()
 
     def _populate_song_table(self):
         for root, dirs, files in walk(self.music_root):
@@ -30,7 +31,7 @@ class Command(BaseCommand):
                     print(album.name, full_path)
                     with open(full_path, 'rb') as f:
                         new = Song(name=fname, album=album, music_file=File(f))
-                        new.save()  
+                        new.save()
 
     def handle(self, *args, **options):
         Album.objects.all().delete()
