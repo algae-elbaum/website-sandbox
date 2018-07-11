@@ -50,7 +50,6 @@ class Command(BaseCommand):
                         new.save()
 
     def handle(self, *args, **options):
-        Album.objects.all().delete()
         self._populate_album_table(options['music_root'][0])
         print('----')
         self._populate_song_table(options['music_root'][0])
