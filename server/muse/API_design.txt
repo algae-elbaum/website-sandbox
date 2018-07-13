@@ -1,0 +1,11 @@
+Back up. Define the API.
+
+General idea: React single page app asks api for music info to show/play
+
+Will want to ask for: Albums, songs, playlists (todo), 
+
+
+REQUEST              RESPONSE      FORMAT
+GET api/albums       All albums    [{"name": album name, "id": album uid, "cover_art": image url},...]
+GET api/albums/id    Album info    {"name": album name, "id": album uid, "cover_art": image url, "songs": [{"name": song name, "id": song uid},...]}
+GET api/songs/id     Song info     {"name": song name, "id": song uid, "album_id": album uid, "file_url": file url}

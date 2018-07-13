@@ -4,9 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('api/albums/', views.AlbumsView.as_view(), name='files'),
-    path('api/albums/<slug:path>', views.AlbumsView.as_view(), name='files'),
-    path('api/songs/', views.SongsView.as_view(), name='files'),
-    path('api/songs/<slug:path>', views.SongsView.as_view(), name='files'),
-]
-
+    path('api/albums/', views.AlbumAPIView.as_view()),
+    path('api/albums/<int:album_id>', views.AlbumAPIView.as_view()),
+    path('api/songs/<int:song_id>', views.SongAPIView.as_view())]

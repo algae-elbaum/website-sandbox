@@ -2,7 +2,7 @@ from django.db import models
 
 class Album(models.Model):
     name = models.CharField(max_length=200)
-    album_art = models.FileField(upload_to='muse')
+    cover_art = models.FileField(upload_to='muse')
     tags = models.CharField(max_length=200)
 #    genres = models.ManyToManyField(Genre)
 
