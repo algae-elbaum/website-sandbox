@@ -1,11 +1,12 @@
 from django.views.generic import View
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from .models import Album, Song
 import json
 
-def index(request):
-    return HttpResponse('3, 2, 1 let\'s jam.')
+class PlayerView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'muse/player.html', {})
 
 
 class AlbumAPIView(View):

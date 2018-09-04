@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  {% load static %}
+  <script src="{% static 'muse/player.js' %}"></script>   
+  
+  <style>
+/*    body {width: 50%;} */
+    .column {
+        float: left;
+        width: 33.33%;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+  </style>
+</head>
+
+<body onload="page_load()" style="margin: 10px 20px 0px">
+<div id=maintext>
+  <audio id="curr_song" controls="true" autoplay="true" onended="play_next()"></audio>
+  <button onclick="play_prev()">prev</button>
+  <button onclick="play_next()">next</button>
+  <br>
+  <br>
+  <div class="row">
+    <div class="column" id="albums_col">
+      <h4 id="albums_header">Albums</h4>
+      <ul class="list-group" id="albums"></ul>
+    </div>
+    <div class="column" id="curr_album_col">
+      <h4 id="curr_album_header"></h4>
+      <ul class="list-group" id="curr_album"></ul>
+    </div>
+    <div class="column" id="playlist_col">
+      <h4 id="playlist_header">playlist</h4>
+      <ul class="list-group" id="playlist"></ul>
+    </div>
+  </div>
+
+  <p class="text-muted">
+    <br><br><br>
+    Probably don't play copywritten songs here if you're not me please
+    <br><br>
+     3, 2, 1, let's jam
+  </p> 
+  </body>
+
+</div>
+
+</body>
+
+</html>
