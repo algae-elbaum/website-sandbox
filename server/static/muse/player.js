@@ -180,7 +180,14 @@ function refresh_playlist()
         var new_li = document.createElement('li');
         var song = document.createElement('a');
         song.innerText = playlist[i].name;
-        song.onclick = play_song;
+        song.onclick =
+            function (event)
+            {
+                curr_index = event.srcElement.getAttribute('data-idx') - 1;
+                play_next();
+            };
+                
+        song.setAttribute('data-idx', i);
         song.setAttribute('data-id', playlist[i].id);
 
         if (i === curr_index)
