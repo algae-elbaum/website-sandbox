@@ -29,6 +29,13 @@
         display: table;
         clear: both;
     }
+    #playlist_header {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    #clear_playlist_btn {
+        display: inline-block;
+    }
   </style>
 </head>
 
@@ -50,6 +57,7 @@
     </div>
     <div class="column" id="playlist_col">
       <h4 id="playlist_header">playlist</h4>
+      <button id="clear_playlist_btn" onclick="clear_playlist()">clear</button>
       <ul class="list-group" id="playlist"></ul>
     </div>
   </div>

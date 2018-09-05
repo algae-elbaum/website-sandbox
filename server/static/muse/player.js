@@ -196,6 +196,13 @@ function refresh_playlist()
         pl_div.appendChild(new_li);
     }
 }
+function clear_playlist(event)
+{
+    playlist = [];
+    curr_index = -1;
+    refresh_playlist();
+}
+
 
 // Change current position in the playlist by i
 function jump_by(i)
