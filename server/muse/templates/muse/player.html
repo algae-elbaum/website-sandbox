@@ -41,9 +41,9 @@
 
 <body onload="page_load()" style="margin: 10px 20px 0px">
 <div id=maintext>
-  <audio id="curr_song" controls="true" autoplay="true" onended="play_next()"></audio>
-  <button onclick="play_prev()">prev</button>
-  <button onclick="play_next()">next</button>
+  <audio id="curr_song" controls="true" autoplay="true" onended="dflt_pl.play_next()"></audio>
+  <button onclick="dflt_pl.play_prev()">prev</button>
+  <button onclick="dflt_pl.play_next()">next</button>
   <br>
   <br>
   <div class="row">
@@ -57,7 +57,7 @@
     </div>
     <div class="column" id="playlist_col">
       <h4 id="playlist_header">playlist</h4>
-      <button id="clear_playlist_btn" onclick="clear_playlist()">clear</button>
+      <button id="clear_playlist_btn" onclick="dflt_pl.clear_playlist()">clear</button>
       <ul class="list-group" id="playlist"></ul>
     </div>
   </div>
