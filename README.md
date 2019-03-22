@@ -5,7 +5,7 @@ My personal website! algaelbaum.me
 Sandbox as in a playground.
 
 Homepage with basic information. Side pages with whatever dumb projects I end
-up doing since right now I feel I'm stagnating.
+up doing.
 
 
 To do the thing:
